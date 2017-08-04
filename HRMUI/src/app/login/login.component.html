@@ -1,0 +1,28 @@
+<div class="login">
+    <h1><a routerLink="/">UXPB</a></h1>
+
+    <div>
+        <form novalidate class="form-horizontal" #loginForm="ngForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <label>Username or Email</label>
+                <input type="text" class="form-control" required [(ngModel)]="loginInfo.loginId" name="loginId">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" class="form-control" #password required
+                       [(ngModel)]="loginInfo.password" name="password">
+            </div>
+            <div class="forgetmenot pull-left">
+                <label for="rememberme"><input name="rememberme" id="rememberme" value="forever" type="checkbox">Remember Me</label>
+            </div>
+            <div class="submit pull-right">
+                <button type="submit" class="btn btn-primary" [class.disabled]="isClicked"
+                        [disabled]="!loginForm.form.valid"
+                        value="Login" name="loginButton">Login
+                </button>
+            </div>
+            <span class="clearfix"></span>
+        </form>
+    </div>
+</div>
+

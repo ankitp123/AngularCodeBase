@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HRM UI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <!-- Polyfills -->
+    <script src="js/libraries/shim.min.js"></script>
+    <script src="js/libraries/zone.js"></script>
+    <script src="js/libraries/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('main.js').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+    <base href="/hrmui">
+</head>
+
+<body id="inner">
+<my-app>Loading...</my-app>
+</body>
+</html>

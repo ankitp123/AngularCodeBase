@@ -1,0 +1,67 @@
+<div id="top-section">
+    <div id="logo" class="col-sm-2"><a routerLink="/">HRM</a></div>
+
+    <div *ngIf="currentUser" id="user-nav">
+        <ul>
+            <li class="profile-information">
+                <a class="arrow">{{currentUser.firstName}}</a>
+                <ul>
+                    <li>
+                        <div class="profile-pic-lg"></div>
+                        <div class="profile-info-fl">
+                            <strong>{{currentUser.firstName}} {{currentUser.lastName}}</strong>
+                            <a routerLink="/edit-profile">Edit Profile</a>
+                            <a (click)="logout()" class="cursorPointer">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a>Help</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div id="navigation">
+    <div class="col-xs-12">
+        <ul class="pull-left menu">
+            <li><a routerLink="/control/system">System</a></li>
+            <li><a routerLink="/control/reports">Reports</a></li>
+            <li><a routerLink="/control/recruitment">Recruitment</a></li>
+            <li><a routerLink="/control/time-sheet">Time Sheet</a></li>
+            <li><a routerLink="/control/pim">PIM</a></li>
+            <li><a routerLink="/control/prm">PRM</a></li>
+            <li><a routerLink="/control/team">Team</a></li>
+            <li><a routerLink="/control/leave">Leave</a></li>
+
+        </ul>
+        <ul class="pull-right">
+        </ul>
+    </div>
+</div>
+
+<div id="body-section">
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
